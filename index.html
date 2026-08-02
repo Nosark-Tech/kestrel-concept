@@ -1,52 +1,605 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Kestrel Building &amp; Pest — Reference Concept</title>
 <meta name="description" content="A reference concept for pre-purchase building and timber pest inspections.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--nav-h:76px;--navy:#1B263B;--navy-deep:#131C2E;--gold:#D4AF37;--bone:#F7F6F2;--ink:#172134;--muted:#617087;--dark-muted:#B7C0D4;--line:rgba(27,38,59,.16);--dark-line:rgba(247,246,242,.16);--serif:"Fraunces",Georgia,serif;--sans:"Hanken Grotesk",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 20px)}body{margin:0;background:var(--bone);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit}::selection{background:var(--gold);color:var(--navy-deep)}:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}.skip{position:absolute;z-index:100;left:-999px;top:10px;background:var(--gold);color:var(--navy-deep);padding:10px 15px}.skip:focus{left:10px}
-.nav{height:var(--nav-h);position:fixed;inset:0 0 auto;z-index:30;background:rgba(19,28,46,.90);backdrop-filter:blur(16px);border-bottom:1px solid rgba(247,246,242,.1)}.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font:600 19px/1 var(--serif);color:var(--bone);text-decoration:none}.brand small{display:block;margin-top:5px;font:700 9px/1 var(--sans);letter-spacing:.17em;color:var(--gold)}.nlinks{display:flex;align-items:center;gap:25px;color:var(--dark-muted);font-size:13px}.nlinks a{text-decoration:none}.nlinks a:hover{color:var(--gold)}.phone{border:1px solid rgba(247,246,242,.34);border-radius:999px;padding:9px 15px;color:var(--bone);font-size:13px;font-weight:700;text-decoration:none}.phone:hover{border-color:var(--gold);color:var(--gold)}
-.dark{color:var(--bone);background:radial-gradient(circle at 85% 12%,rgba(212,175,55,.18),transparent 28%),radial-gradient(circle at 12% 90%,rgba(70,103,151,.25),transparent 31%),linear-gradient(135deg,var(--navy-deep),var(--navy) 58%,#202e46)}.light{background:radial-gradient(circle at 8% 12%,rgba(212,175,55,.13),transparent 25%),radial-gradient(circle at 94% 85%,rgba(79,111,157,.11),transparent 27%),linear-gradient(140deg,#fffefa,var(--bone) 48%,#eceef0)}.seam{position:relative}.seam:after{content:"";position:absolute;z-index:1;right:0;bottom:-1px;left:0;height:25px;pointer-events:none;background:linear-gradient(135deg,transparent 0 49%,rgba(247,246,242,.13) 50% 51%,transparent 52%) 0 0/32px 25px}
-.hero{min-height:690px;padding:calc(var(--nav-h) + clamp(4rem,10vw,8.5rem)) 0 clamp(4.5rem,8vw,7rem);overflow:hidden}.eyebrow,.label{margin:0;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(250px,.55fr);gap:clamp(35px,8vw,105px);align-items:end}.hero h1{max-width:11ch;margin:18px 0 23px;font:600 clamp(2.35rem,5.5vw,4.2rem)/1.03 var(--serif);letter-spacing:-.045em}.hero h1 em{color:var(--gold);font-style:italic}.lede{max-width:58ch;margin:0;color:var(--dark-muted);font-size:clamp(17px,2vw,20px)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:31px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 21px;text-decoration:none;font-size:14px;font-weight:700;transition:.2s transform,.2s background}.btn:hover{transform:translateY(-2px)}.primary{color:var(--navy-deep);background:linear-gradient(180deg,#e7ca68,var(--gold));box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 8px 20px rgba(0,0,0,.2)}.ghost{border:1px solid rgba(247,246,242,.35);color:var(--bone);background:rgba(247,246,242,.08);backdrop-filter:blur(8px)}.hero-card{padding:25px;border:1px solid var(--dark-line);background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025));box-shadow:0 20px 50px rgba(0,0,0,.15)}.hero-card p{margin:0 0 16px;color:var(--dark-muted);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.facts{display:grid;gap:13px}.facts div{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--dark-line);padding-top:11px}.facts span{font-size:13px;color:var(--dark-muted)}.facts b{font:500 17px var(--serif);text-align:right}.trust{margin-top:clamp(50px,9vw,105px);display:flex;gap:20px;justify-content:space-between;border-top:1px solid var(--dark-line);padding-top:18px;color:var(--dark-muted);font-size:12px}.trust b{color:var(--bone);font-weight:600}
-section{padding:clamp(70px,10vw,120px) 0}.intro{display:grid;grid-template-columns:.3fr 1fr;gap:25px;align-items:start}.num{margin:4px 0 0;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.light .num{color:#927319}.intro h2,.contact h2{max-width:14ch;margin:0;font:600 clamp(2rem,4.2vw,3.45rem)/1.08 var(--serif);letter-spacing:-.04em}.intro .sub{max-width:59ch;margin:18px 0 0;color:var(--muted);font-size:17px}.dark .sub{color:var(--dark-muted)}
-.reader{margin-top:46px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.65);box-shadow:0 24px 60px rgba(20,33,52,.1)}.reader-head{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:18px 23px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#fbfaf5,#e9edf0)}.reader-head strong{font:600 18px var(--serif)}.reader-head span,.count{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.chips{display:flex;flex-wrap:wrap;gap:8px;padding:17px 23px;border-bottom:1px solid var(--line)}.chip{cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:rgba(255,255,255,.5);color:var(--ink);font-size:13px;font-weight:700}.chip:hover,.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--bone)}.chip .ct{opacity:.65;margin-left:5px}.count{margin:0;padding:13px 23px;border-bottom:1px solid var(--line)}.entries{margin:0;padding:0;list-style:none}.entry{border-bottom:1px solid var(--line)}.entry:last-child{border:0}.entry-btn{display:grid;grid-template-columns:57px 1fr auto;gap:16px;width:100%;border:0;padding:18px 23px;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.entry-btn:hover,.entry.open .entry-btn{background:rgba(212,175,55,.09)}.ref{color:var(--muted);font:500 16px var(--serif)}.ttl{font-weight:700}.ttl small{display:block;margin-top:2px;color:var(--muted);font-size:13px;font-weight:400}.rate{align-self:start;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:700;letter-spacing:.12em}.major{background:#f5dfdc;color:#7b2c28}.minor{background:#e0eadc;color:#385d3c}.entry-body{display:none;grid-template-columns:1fr 170px;gap:30px;padding:0 23px 26px 96px;color:#46536a}.entry.open .entry-body{display:grid}.entry-body p{margin:0}.entry-body p+p{margin-top:18px}.lbl{color:#7f6a23!important;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.shot,.portrait{display:grid;place-items:center;min-height:120px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,rgba(27,38,59,.06) 0 8px,transparent 8px 16px);color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.12em;text-align:center}.reader-foot{margin:0;padding:18px 23px;background:#eef0ee;color:var(--muted);font-size:14px}
-.inspectors{background:radial-gradient(circle at 13% 10%,rgba(212,175,55,.18),transparent 25%),radial-gradient(circle at 93% 80%,rgba(75,110,165,.23),transparent 28%),linear-gradient(145deg,var(--navy-deep),var(--navy))}.tabs{display:flex;gap:25px;margin-top:45px;border-bottom:1px solid var(--dark-line)}.tab{position:relative;border:0;padding:0 0 15px;background:none;color:var(--dark-muted);font:600 clamp(20px,3vw,27px) var(--serif);cursor:pointer}.tab[aria-selected=true]{color:var(--bone)}.tab[aria-selected=true]:after{content:"";position:absolute;height:2px;right:0;bottom:-1px;left:0;background:var(--gold)}.panel{display:none;grid-template-columns:.75fr 1.25fr;gap:clamp(28px,6vw,72px);padding-top:35px}.panel.on{display:grid}.portrait{min-height:360px;border-color:var(--dark-line);background:repeating-linear-gradient(135deg,rgba(247,246,242,.08) 0 9px,transparent 9px 18px);color:var(--dark-muted)}.panel h3{margin:0;font:600 clamp(28px,4vw,38px)/1 var(--serif)}.role{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.panel p:not(.role){color:var(--dark-muted)}.plist{margin:25px 0 0;padding:0;list-style:none;border-top:1px solid var(--dark-line)}.plist li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--dark-line);font-size:14px}.plist li span:last-child{color:var(--dark-muted);text-align:right}
-.standards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:45px}.standard{padding:25px;background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(232,235,235,.8));border:1px solid var(--line)}.standard b{display:block;font:600 25px var(--serif)}.standard span{display:block;margin-top:8px;color:var(--muted);font-size:14px}.reviews{display:grid;gap:0;margin-top:45px;border-top:1px solid var(--line)}.review{display:grid;grid-template-columns:190px 1fr;gap:30px;padding:25px 0;border-bottom:1px solid var(--line)}.review-meta{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.stars{margin-top:8px;color:#a17d14;letter-spacing:2px}.review blockquote{max-width:800px;margin:0;font:500 clamp(20px,2.7vw,28px)/1.28 var(--serif);letter-spacing:-.02em}
-.contact{background:radial-gradient(circle at 76% 20%,rgba(212,175,55,.22),transparent 26%),linear-gradient(125deg,#111a2b,var(--navy-deep) 48%,#243653)}.contact h2{color:var(--bone)}.contact .sub{max-width:50ch;margin:17px 0 0}.bigphone{display:inline-block;margin-top:30px;color:var(--gold);font:600 clamp(2.5rem,6vw,5rem)/1 var(--serif);letter-spacing:-.045em;text-decoration:none}.bigphone:hover{text-decoration:underline;text-underline-offset:8px}.contact-meta{color:var(--dark-muted);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.footer{padding:32px 0;background:linear-gradient(135deg,#fffefa,var(--bone));color:var(--muted);font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}.disclaimer{max-width:88ch;margin:18px 0 0;font-size:12px}.tag{position:fixed;z-index:40;bottom:15px;left:15px;border-radius:999px;padding:7px 10px;background:var(--gold);color:var(--navy-deep);font-size:9px;font-weight:700;letter-spacing:.13em}
-.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
-@media(max-width:760px){:root{--nav-h:68px}.wrap{width:min(100% - 32px,1160px)}.nlinks{display:none}.phone{padding:8px 11px;font-size:12px}.hero{min-height:0}.hero-grid,.intro,.panel{grid-template-columns:1fr}.hero-card{margin-top:5px}.trust{display:grid;grid-template-columns:1fr 1fr}.entry-btn{grid-template-columns:40px 1fr;gap:11px;padding:16px}.rate{grid-column:2;justify-self:start}.entry-body{grid-template-columns:1fr;padding:0 16px 22px}.shot{min-height:100px}.standards{grid-template-columns:1fr}.review{grid-template-columns:1fr;gap:11px}.reader-head{align-items:flex-start;flex-direction:column}.portrait{min-height:270px}}@media(max-width:430px){.trust{grid-template-columns:1fr}.tag{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.btn{transition:none}}
+:root{
+  --navy:#1B263B;
+  --navy-2:#243352;
+  --navy-deep:#131C2E;
+  --bone:#F7F6F2;
+  --bone-2:#EDEAE0;
+  --ink:#182233;
+  --ink-soft:#4A5570;
+  --muted:#727E97;
+  --line:rgba(27,38,59,.13);
+  --line-dark:rgba(247,246,242,.15);
+  --gold:#D4AF37;
+  --gold-lt:#E7CE7E;
+  --dark-muted:#B7C0D4;
+  --hero-blend:19,28,46;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --nav-h:76px;
+  --pad:clamp(4.5rem,8vw,7.5rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 18px)}
+body{font-family:var(--sans);background:var(--bone);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,34px)}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,blockquote{font-family:var(--serif);font-weight:600;letter-spacing:-.022em;line-height:1.07}
+button{font:inherit}
+img{display:block;max-width:100%}
+::selection{background:var(--gold);color:var(--navy-deep)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-9999px;background:var(--gold);color:var(--navy-deep);padding:12px 18px;z-index:200;font-weight:700}
+.skip:focus{left:14px;top:14px}
+
+/* ── texture ── */
+.grain{position:relative}
+.grain::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ── surfaces ── */
+.s-bone{background:
+  radial-gradient(ellipse 70% 50% at 8% 0%, rgba(212,175,55,.1), transparent 58%),
+  radial-gradient(ellipse 60% 45% at 100% 100%, rgba(75,110,165,.09), transparent 55%),
+  linear-gradient(180deg,#FCFBF7 0%,var(--bone) 50%,#EEEBE1 100%);position:relative}
+.s-ivory{background:
+  radial-gradient(ellipse 80% 50% at 92% 6%, rgba(212,175,55,.11), transparent 58%),
+  radial-gradient(ellipse 55% 45% at 4% 96%, rgba(75,110,165,.08), transparent 55%),
+  linear-gradient(180deg,#F4F1E9 0%,var(--bone-2) 55%,#E8E4D7 100%);position:relative}
+.s-paper{background:linear-gradient(180deg,#FFFEFB 0%,#FAF8F2 100%);position:relative}
+
+/* ── nav ── */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--nav-h);transition:background .45s var(--ease),backdrop-filter .45s}
+.nav::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:transparent;transition:background .45s}
+.nav.solid{background:rgba(19,28,46,.92);backdrop-filter:blur(16px) saturate(1.2)}
+.nav.solid::after{background:var(--line-dark)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:100%}
+.brand{font-family:var(--serif);font-weight:600;font-size:19px;color:#fff;line-height:1.05}
+.brand span{display:block;font-family:var(--sans);font-weight:700;font-size:9.5px;letter-spacing:.17em;color:var(--gold);margin-top:5px}
+.nlinks{display:flex;gap:28px;font-size:13.5px;font-weight:500;color:var(--dark-muted)}
+.nlinks a{position:relative;padding:3px 0}
+.nlinks a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nlinks a:hover{color:#fff}
+.nlinks a:hover::after{transform:scaleX(1)}
+@media(max-width:900px){.nlinks{display:none}}
+.ncall{font-size:13.5px;font-weight:700;background:var(--gold);color:var(--navy-deep);padding:11px 19px;border-radius:999px;white-space:nowrap;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 6px 18px rgba(212,175,55,.24);transition:transform .3s var(--ease),box-shadow .3s}
+.ncall:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 26px rgba(212,175,55,.36)}
+
+/* ── hero ── */
+.hero{position:relative;min-height:min(94svh,880px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--navy-deep)}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%)}
+.hero-img{position:absolute;inset:-4%;background-image:url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2200&q=80");
+  background-size:cover;background-position:center 40%;filter:contrast(1.05) saturate(.98) brightness(.9);
+  animation:kb 26s ease-out alternate infinite}
+@keyframes kb{0%{transform:scale(1.03) translate3d(0,0,0)}100%{transform:scale(1.11) translate3d(-1.2%,-.9%,0)}}
+.hero-media::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(102deg,
+    rgba(var(--hero-blend),.97) 0%,
+    rgba(var(--hero-blend),.93) 20%,
+    rgba(var(--hero-blend),.76) 38%,
+    rgba(var(--hero-blend),.44) 54%,
+    rgba(var(--hero-blend),.16) 70%,
+    transparent 90%),
+  linear-gradient(180deg,
+    rgba(var(--hero-blend),.62) 0%,
+    rgba(var(--hero-blend),.2) 26%,
+    transparent 50%,
+    rgba(var(--hero-blend),.5) 86%,
+    rgba(var(--hero-blend),.86) 100%)}
+@media(max-width:820px){
+  .hero-media::after{background:linear-gradient(180deg,
+    rgba(var(--hero-blend),.95) 0%,
+    rgba(var(--hero-blend),.86) 30%,
+    rgba(var(--hero-blend),.62) 56%,
+    rgba(var(--hero-blend),.5) 74%,
+    rgba(var(--hero-blend),.9) 100%)}
+}
+.hero-inner{position:relative;z-index:3;padding-top:calc(var(--nav-h) + clamp(3rem,7vw,5.5rem));padding-bottom:clamp(2rem,4vw,3rem)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-lt)}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.5rem);color:#fff;max-width:14ch;margin-top:24px;text-shadow:0 2px 30px rgba(0,0,0,.3)}
+.hero h1 em{font-style:italic;color:var(--gold-lt)}
+.lede{margin-top:24px;font-size:clamp(1.06rem,1.9vw,1.28rem);max-width:46ch;color:rgba(255,255,255,.86);line-height:1.55}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;font-weight:700;font-size:15.5px;padding:15px 26px;border-radius:999px;line-height:1.2;transition:transform .32s var(--ease),box-shadow .32s var(--ease),background .3s}
+.btn-gold{background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(0,0,0,.05)),linear-gradient(135deg,#EAD48C,var(--gold) 55%,#A5811F);color:var(--navy-deep);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 12px 30px rgba(212,175,55,.3)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 18px 40px rgba(212,175,55,.4)}
+.btn-gold small{font-size:9.5px;font-weight:600;letter-spacing:.13em;opacity:.72;margin-top:3px}
+.btn-glass{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.07);backdrop-filter:blur(10px);padding:17px 26px}
+.btn-glass:hover{transform:translateY(-3px);background:rgba(255,255,255,.13);border-color:var(--gold)}
+
+/* trust — glass strip over hero base */
+.trust{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(19,28,46,.34),rgba(19,28,46,.74));backdrop-filter:blur(10px)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.t-item{padding:24px 22px 26px 0;border-right:1px solid rgba(255,255,255,.11)}
+.t-item:last-child{border-right:0}
+.t-item b{display:block;font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:600;color:#fff;letter-spacing:-.02em}
+.t-item span{display:block;margin-top:7px;font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);line-height:1.6;max-width:20ch}
+@media(max-width:820px){
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .t-item{padding:18px 14px 18px 0;border-bottom:1px solid rgba(255,255,255,.11)}
+  .t-item:nth-child(odd){border-right:1px solid rgba(255,255,255,.11)}
+  .t-item:nth-child(even){border-right:0}
+  .t-item:nth-last-child(-n+2){border-bottom:0}
+}
+
+/* ── reveal ── */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.hero .rv{transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1!important;transform:none!important;transition:none}
+  .hero-img,.band-media .ph{animation:none}
+  .btn,.ncall,.chip,.standard,.report-photo .ph{transition:none}
+}
+
+/* ── sections ── */
+section{padding:var(--pad) 0;position:relative}
+.kick{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8C6F1C;margin-bottom:16px}
+.dark .kick,.band .kick{color:var(--gold)}
+h2{font-size:clamp(2.05rem,4.4vw,3.4rem);max-width:17ch}
+.dark h2,.band h2{color:#fff}
+.sub{margin-top:18px;max-width:56ch;color:var(--ink-soft);font-size:1.05rem}
+.dark .sub,.band .sub{color:var(--dark-muted)}
+.intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}
+@media(max-width:900px){.intro-grid{grid-template-columns:1fr;gap:26px}}
+
+/* ── report photo + reader ── */
+.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:50px}
+@media(max-width:940px){.report-grid{grid-template-columns:1fr;gap:34px}}
+.report-photo{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3.1;box-shadow:0 30px 60px rgba(19,28,46,.18);background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%)}
+.report-photo .ph{position:absolute;inset:0;background-image:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80");background-size:cover;background-position:center;filter:contrast(1.03) saturate(.95) brightness(1.01);transition:transform 1.2s var(--ease)}
+.report-photo:hover .ph{transform:scale(1.05)}
+.report-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(247,246,242,0) 42%,rgba(19,28,46,.55) 100%)}
+
+.reader{overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.68);box-shadow:0 24px 60px rgba(19,28,46,.1);border-radius:18px}
+.reader-head{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:19px 24px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#fbfaf5,#e9edf0)}
+.reader-head strong{font:600 18px var(--serif)}
+.reader-head span,.count{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:17px 24px;border-bottom:1px solid var(--line)}
+.chip{cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:9px 14px;background:rgba(255,255,255,.5);color:var(--ink);font-size:13px;font-weight:700;transition:background .25s,color .25s,border-color .25s}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip .ct{opacity:.65;margin-left:5px}
+.count{margin:0;padding:13px 24px;border-bottom:1px solid var(--line)}
+.entries{margin:0;padding:0;list-style:none}
+.entry{border-bottom:1px solid var(--line)}
+.entry:last-child{border:0}
+.entry-btn{display:grid;grid-template-columns:57px 1fr auto;gap:16px;width:100%;border:0;padding:18px 24px;background:transparent;color:var(--ink);text-align:left;cursor:pointer;transition:background .25s}
+.entry-btn:hover,.entry.open .entry-btn{background:rgba(212,175,55,.09)}
+.ref{color:var(--muted);font:500 16px var(--serif)}
+.ttl{font-weight:700}
+.ttl small{display:block;margin-top:2px;color:var(--muted);font-size:13px;font-weight:400}
+.rate{align-self:start;border-radius:999px;padding:4px 9px;font-size:10px;font-weight:700;letter-spacing:.12em}
+.major{background:#f5dfdc;color:#7b2c28}
+.minor{background:#e0eadc;color:#385d3c}
+.entry-body{display:none;grid-template-columns:1fr 170px;gap:30px;padding:0 24px 26px 96px;color:#46536a}
+.entry.open .entry-body{display:grid}
+.entry-body p{margin:0}
+.entry-body p+p{margin-top:18px}
+.lbl{color:#8C6F1C!important;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.shot,.portrait{display:grid;place-items:center;min-height:120px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,rgba(27,38,59,.06) 0 8px,transparent 8px 16px);color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.12em;text-align:center;border-radius:10px}
+.reader-foot{margin:0;padding:19px 24px;background:#EEF0EA;color:var(--muted);font-size:14px}
+@media(max-width:760px){
+  .entry-btn{grid-template-columns:40px 1fr;gap:11px;padding:16px}
+  .rate{grid-column:2;justify-self:start}
+  .entry-body{grid-template-columns:1fr;padding:0 16px 22px}
+  .shot{min-height:100px}
+  .reader-head{align-items:flex-start;flex-direction:column}
+}
+
+/* ── dark band with photo — inspectors ── */
+.band{position:relative;overflow:hidden;background:var(--navy-deep)}
+.band-media{position:absolute;inset:0;z-index:0;background:linear-gradient(150deg,var(--navy) 0%,var(--navy-deep) 100%)}
+.band-media .ph{position:absolute;inset:-3%;background-image:url("https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&w=1900&q=80");background-size:cover;background-position:center 42%;filter:contrast(1.04) saturate(.9) brightness(.72);animation:kb 30s ease-out alternate infinite}
+.band-media::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(102deg,rgba(var(--hero-blend),.96) 0%,rgba(var(--hero-blend),.9) 28%,rgba(var(--hero-blend),.66) 48%,rgba(var(--hero-blend),.36) 66%,rgba(var(--hero-blend),.62) 100%),
+  linear-gradient(180deg,rgba(var(--hero-blend),.6),rgba(var(--hero-blend),.28) 40%,rgba(var(--hero-blend),.74))}
+@media(max-width:820px){
+  .band-media::after{background:linear-gradient(180deg,rgba(var(--hero-blend),.9) 0%,rgba(var(--hero-blend),.7) 34%,rgba(var(--hero-blend),.6) 60%,rgba(var(--hero-blend),.86) 100%)}
+}
+.band .wrap{position:relative;z-index:2}
+
+.tabs{display:flex;gap:26px;margin-top:44px;border-bottom:1px solid var(--line-dark)}
+.tab{position:relative;border:0;padding:0 0 15px;background:none;color:var(--dark-muted);font:600 clamp(19px,3vw,25px) var(--serif);cursor:pointer;transition:color .3s}
+.tab[aria-selected="true"]{color:#fff}
+.tab[aria-selected="true"]::after{content:"";position:absolute;height:2px;right:0;bottom:-1px;left:0;background:var(--gold)}
+.panel{display:none;grid-template-columns:.72fr 1.28fr;gap:clamp(28px,6vw,68px);padding-top:38px}
+.panel.on{display:grid}
+@media(max-width:900px){.panel{grid-template-columns:1fr}}
+.panel .portrait{min-height:340px;border-color:var(--line-dark);background:repeating-linear-gradient(135deg,rgba(247,246,242,.08) 0 9px,transparent 9px 18px);color:var(--dark-muted)}
+.panel h3{margin:0;font:600 clamp(27px,4vw,36px)/1 var(--serif);color:#fff}
+.role{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.panel p:not(.role){color:var(--dark-muted);margin-top:14px}
+.plist{margin:24px 0 0;padding:0;list-style:none;border-top:1px solid var(--line-dark)}
+.plist li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-dark);font-size:14px;color:#fff}
+.plist li span:last-child{color:var(--dark-muted);text-align:right}
+
+/* ── standards + reviews ── */
+.standards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+@media(max-width:760px){.standards{grid-template-columns:1fr}}
+.standard{padding:26px;background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(232,235,235,.75));border:1px solid var(--line);border-radius:14px;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
+.standard:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(19,28,46,.1);border-color:rgba(212,175,55,.5)}
+.standard b{display:block;font:600 24px var(--serif)}
+.standard span{display:block;margin-top:8px;color:var(--muted);font-size:14px}
+.quotes{margin-top:56px;border-top:1px solid var(--line)}
+.quote-row{display:grid;grid-template-columns:1fr;gap:16px;padding:34px 0;border-bottom:1px solid var(--line)}
+.quote-row blockquote{font-size:clamp(1.28rem,2.4vw,1.7rem);line-height:1.32;color:var(--ink);max-width:62ch}
+.quote-row blockquote::before{content:"“";display:block;font-family:var(--serif);font-size:3rem;line-height:.5;color:var(--gold);margin-bottom:10px}
+.quote-row cite{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-family:var(--sans);font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.quote-row .stars{color:#a17d14;letter-spacing:2px;font-size:13px}
+
+/* ── contact card with photo ── */
+.contact-inner{position:relative;border-radius:26px;overflow:hidden;padding:clamp(2.6rem,5.5vw,4.5rem);color:#fff;isolation:isolate;background:linear-gradient(150deg,var(--navy) 0%,var(--navy-deep) 100%)}
+.contact-inner .ph{position:absolute;inset:0;z-index:-2;background-image:url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1800&q=80");background-size:cover;background-position:center;filter:brightness(.58) saturate(.92)}
+.contact-inner::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(ellipse 70% 90% at 100% 50%, rgba(212,175,55,.22), transparent 58%),
+  linear-gradient(120deg,rgba(var(--hero-blend),.96) 0%,rgba(var(--hero-blend),.88) 40%,rgba(var(--hero-blend),.68) 100%)}
+.contact-inner h2{color:#fff;font-size:clamp(2rem,4.5vw,3.1rem);max-width:18ch}
+.contact-inner .sub{color:rgba(255,255,255,.78);max-width:50ch}
+.bigphone{display:inline-block;font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,6vw,3.7rem);color:var(--gold-lt);margin-top:28px;letter-spacing:-.03em;transition:color .3s}
+.bigphone:hover{color:#fff}
+.c-meta{margin-top:12px;font-size:10.5px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:rgba(255,255,255,.58)}
+.c-mail{margin-top:22px;color:rgba(255,255,255,.74)}
+.c-mail a{color:#fff;font-weight:600;border-bottom:1px solid rgba(255,255,255,.35)}
+
+footer{padding:42px 0 58px;font-size:13.5px;color:var(--muted);background:#FAF8F2}
+.fline{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
+.disc{margin-top:18px;font-size:12.3px;line-height:1.65;max-width:82ch}
+.tag{position:fixed;left:16px;bottom:16px;z-index:90;background:var(--navy);color:var(--bone);font-size:9.5px;font-weight:700;letter-spacing:.11em;padding:8px 13px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.2)}
+@media(max-width:700px){.tag{display:none}}
+.prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));z-index:120;width:0;transition:width .1s linear}
 </style>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
-<nav class="nav" aria-label="Primary navigation"><div class="wrap"><a class="brand" href="#">Kestrel Building &amp; Pest<small>Lic 000000 · Demonstration</small></a><div class="nlinks"><a href="#report">The report</a><a href="#inspectors">Inspectors</a><a href="#standards">Standards</a><a href="#contact">Contact</a></div><a class="phone" href="tel:+61400000000">0400 000 000</a></div></nav>
-<header class="hero dark seam"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Pre-purchase building &amp; timber pest</p><h1>Know what’s <em>underneath</em> before you sign.</h1><p class="lede">Two named inspectors, one thorough visit, and a report that makes the important things plain — from settlement risks to Saturday jobs.</p><div class="actions"><a class="btn primary" href="tel:+61400000000">Book an inspection</a><a class="btn ghost" href="#report">Read a sample report</a></div></div><aside class="hero-card"><p>Inspection, made clear</p><div class="facts"><div><span>Report turnaround</span><b>Within 24 hours</b></div><div><span>Prepared to</span><b>AS 4349.1 &amp; .3</b></div><div><span>Professional indemnity</span><b>$20 million</b></div></div></aside></div><div class="trust"><span><b>One report.</b> Building and timber pest.</span><span><b>Named people.</b> No rotating roster.</span><span><b>Plain language.</b> A walkthrough call included.</span></div></div></header>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<nav class="nav" id="nav" aria-label="Primary navigation">
+  <div class="wrap">
+    <a class="brand" href="#">Kestrel Building &amp; Pest<span>LIC 000000 · DEMONSTRATION</span></a>
+    <div class="nlinks">
+      <a href="#report">The report</a>
+      <a href="#inspectors">Inspectors</a>
+      <a href="#standards">Standards</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="ncall" href="tel:+61400000000">0400 000 000</a>
+  </div>
+</nav>
+
+<header class="hero grain">
+  <div class="hero-media"><div class="hero-img"></div></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <p class="eyebrow rv">Pre-purchase building &amp; timber pest</p>
+      <h1 class="rv">Know what's <em>underneath</em> before you sign.</h1>
+      <p class="lede rv">Two named inspectors, one thorough visit, and a report that makes the important things plain — from settlement risks to Saturday jobs.</p>
+      <div class="acts rv">
+        <a class="btn btn-gold" href="tel:+61400000000">Book an inspection<small>0400 000 000 · SEVEN DAYS</small></a>
+        <a class="btn btn-glass" href="#report">Read a sample report</a>
+      </div>
+    </div>
+  </div>
+  <div class="trust">
+    <div class="wrap">
+      <div class="t-item rv"><b>AS 4349.1 &amp; .3</b><span>Every report prepared to the current standards</span></div>
+      <div class="t-item rv"><b>24 hrs</b><span>Report delivered within a day of inspection</span></div>
+      <div class="t-item rv"><b>Licensed</b><span>Fully licensed and insured inspectors</span></div>
+      <div class="t-item rv"><b>$20M</b><span>Professional indemnity cover held</span></div>
+    </div>
+  </div>
+</header>
+
 <main id="main">
-<section class="light" id="report"><div class="wrap"><div class="intro"><p class="num rv">01 · The report</p><div><h2 class="rv">Read one before you pay for one.</h2><p class="sub rv">Filter the defects, open any line, and see exactly how an issue is located, rated and explained. The address has been removed; the report structure has not.</p></div></div>
-<div class="reader rv"><div class="reader-head"><strong>Sample report · 38 pages</strong><span>Defects section · address removed</span></div><div class="chips" role="group" aria-label="Filter defects"><button class="chip" data-filter="all" aria-pressed="true">All <span class="ct" data-count="all"></span></button><button class="chip" data-filter="major" aria-pressed="false">Major <span class="ct" data-count="major"></span></button><button class="chip" data-filter="minor" aria-pressed="false">Minor <span class="ct" data-count="minor"></span></button><button class="chip" data-filter="pest" aria-pressed="false">Timber pest <span class="ct" data-count="pest"></span></button></div><p class="count" id="count" aria-live="polite"></p>
-<ul class="entries" id="entries">
-<li class="entry" data-rate="major" data-cat="building"><button class="entry-btn" aria-expanded="false"><span class="ref">3.1</span><span class="ttl">Roof valley flashing failed<small>Active leak staining to ceiling below bathroom</small></span><span class="rate major">Major</span></button><div class="entry-body"><div><p class="lbl">What was observed</p><p>The valley flashing on the northern roof plane has lifted at the lower third. Water is tracking behind it and staining the ceiling lining in the hallway below. Staining was damp to the touch on the day of inspection.</p><p class="lbl">Why it’s rated major</p><p>Active water entry into the roof void. Left through a wet season it will reach ceiling battens and the light fitting circuit.</p></div><div class="shot">PHOTOGRAPH 3.1<br>BLANK SLOT</div></div></li>
-<li class="entry" data-rate="major" data-cat="building"><button class="entry-btn" aria-expanded="false"><span class="ref">4.4</span><span class="ttl">Subfloor moisture elevated<small>Readings 22–28% at southern bearer run</small></span><span class="rate major">Major</span></button><div class="entry-body"><div><p class="lbl">What was observed</p><p>Moisture readings of 22 to 28 percent were recorded across the southern bearer run, against 12 to 14 percent elsewhere. Two subfloor vents are covered by garden bed soil.</p><p class="lbl">Why it’s rated major</p><p>Sustained moisture above 20 percent in structural timber invites both rot and termite attack.</p></div><div class="shot">PHOTOGRAPH 4.4<br>BLANK SLOT</div></div></li>
-<li class="entry" data-rate="major" data-cat="pest"><button class="entry-btn" aria-expanded="false"><span class="ref">5.2</span><span class="ttl">Inactive termite mudding<small>No live activity found; ventilation restricted</small></span><span class="rate major">Major</span></button><div class="entry-body"><div><p class="lbl">What was observed</p><p>Mud leads were found on two subfloor piers. No live termites were located, but restricted ventilation and a leaking outlet remain.</p><p class="lbl">Why it’s rated major</p><p>Previous activity in a property with unresolved conducive conditions requires a management plan before settlement.</p></div><div class="shot">PHOTOGRAPH 5.2<br>BLANK SLOT</div></div></li>
-<li class="entry" data-rate="major" data-cat="building"><button class="entry-btn" aria-expanded="false"><span class="ref">6.3</span><span class="ttl">Stormwater discharging at footing<small>Downpipe unconnected, north-east corner</small></span><span class="rate major">Major</span></button><div class="entry-body"><div><p class="lbl">What was observed</p><p>The north-east downpipe terminates above ground with no connection to the stormwater line. Scour is visible at the footing.</p><p class="lbl">Why it’s rated major</p><p>Concentrated water at a footing is inexpensive to repair and expensive to ignore.</p></div><div class="shot">PHOTOGRAPH 6.3<br>BLANK SLOT</div></div></li>
-<li class="entry" data-rate="minor" data-cat="pest"><button class="entry-btn" aria-expanded="false"><span class="ref">5.8</span><span class="ttl">Borer damage to garden sleepers<small>Surface flight holes, non-structural timber</small></span><span class="rate minor">Minor</span></button><div class="entry-body"><div><p class="lbl">What was observed</p><p>Flight holes consistent with common furniture borer were noted in landscaping sleepers. The timber is not structural and is not in contact with the dwelling.</p><p class="lbl">Why it’s rated minor</p><p>No risk to the building; noted so it is not mistaken for termite damage later.</p></div><div class="shot">PHOTOGRAPH 5.8<br>BLANK SLOT</div></div></li>
-<li class="entry" data-rate="minor" data-cat="building"><button class="entry-btn" aria-expanded="false"><span class="ref">7.1</span><span class="ttl">Cracked mortar, west elevation<small>Hairline, no displacement, monitor</small></span><span class="rate minor">Minor</span></button><div class="entry-body"><div><p class="lbl">What was observed</p><p>Hairline cracking under 1mm was noted in the mortar bed above the western window head, with no corresponding internal cracking.</p><p class="lbl">Why it’s rated minor</p><p>Consistent with normal seasonal movement. Photograph now so changes are measurable.</p></div><div class="shot">PHOTOGRAPH 7.1<br>BLANK SLOT</div></div></li>
-</ul><p class="reader-foot">Every report also records what could <em>not</em> be inspected on the day, and why. That page is part of what makes a report trustworthy.</p></div></div></section>
-<section class="dark inspectors seam" id="inspectors"><div class="wrap"><div class="intro"><p class="num rv">02 · Who turns up</p><div><h2 class="rv">You’ll know which one is coming.</h2><p class="sub rv">No subcontractors and no rotating roster. One of these two does your inspection and writes your report.</p></div></div><div class="tabs rv" role="tablist" aria-label="Inspectors"><button class="tab" role="tab" aria-selected="true" aria-controls="p-alex" id="t-alex">Alex Harland</button><button class="tab" role="tab" aria-selected="false" aria-controls="p-morgan" id="t-morgan">Morgan Ellis</button></div>
-<div class="panel on rv" id="p-alex" role="tabpanel" aria-labelledby="t-alex"><div class="portrait">PORTRAIT SLOT · BLANK</div><div><h3>Alex Harland</h3><p class="role">Licensed builder · 22 years</p><p>Carpenter by trade, on the tools from 2003 and inspecting full time since 2011. Alex handles pre-purchase and new-build handover work, and writes the structural sections of every report.</p><p>Nothing goes in a report he could not point at and explain to the buyer standing beside him.</p><ul class="plist"><li><span>Pre-purchase building</span><span>Lead inspector</span></li><li><span>New build handover</span><span>Lead inspector</span></li><li><span>Typical time on site</span><span>2 to 3 hours</span></li></ul></div></div>
-<div class="panel" id="p-morgan" role="tabpanel" aria-labelledby="t-morgan" hidden><div class="portrait">PORTRAIT SLOT · BLANK</div><div><h3>Morgan Ellis</h3><p class="role">Timber pest technician · 15 years</p><p>Fifteen years in termite management before moving into inspection work. Morgan handles every timber pest and moisture job, including the subfloor sections nobody enjoys.</p><p>Thermal imaging and moisture metering travel to every inspection, because the conditions that attract pests are the part that matters.</p><ul class="plist"><li><span>Timber pest to AS 4349.3</span><span>Lead inspector</span></li><li><span>Termite management to AS 3660.2</span><span>Lead inspector</span></li><li><span>Typical time on site</span><span>1.5 to 2 hours</span></li></ul></div></div></div></section>
-<section class="light" id="standards"><div class="wrap"><div class="intro"><p class="num rv">03 · Standards &amp; clients</p><div><h2 class="rv">Specific enough to make a decision.</h2><p class="sub rv">Every report states what was inspected, what could not be reached, and the standard under which it was prepared.</p></div></div><div class="standards rv"><div class="standard"><b>AS 4349.1</b><span>Pre-purchase building inspections</span></div><div class="standard"><b>AS 4349.3</b><span>Timber pest inspections</span></div><div class="standard"><b>AS 3660.2</b><span>Termite management in existing buildings</span></div></div><div class="reviews rv"><article class="review"><div class="review-meta">Sarah<br>Pre-purchase · Inner West<p class="stars">★★★★★</p></div><blockquote>“Clear report, same day we needed it, and a call to explain the three things that actually mattered before settlement.”</blockquote></article><article class="review"><div class="review-meta">James<br>Building &amp; pest · North<p class="stars">★★★★★</p></div><blockquote>“Found stormwater dumping on the footing that two other quotes had missed. Paid for itself before we signed.”</blockquote></article><article class="review"><div class="review-meta">Priya<br>Handover · New build<p class="stars">★★★★★</p></div><blockquote>“No sales pitch, no scare tactics. Just what was wrong, what wasn’t, and what to do next.”</blockquote></article></div></div></section>
-<section class="contact dark" id="contact"><div class="wrap"><p class="eyebrow rv">Talk it through</p><h2 class="rv">Ring us. We’ll tell you straight away if we can get there tomorrow.</h2><p class="sub rv">Tell us the address and the date you need it by. That’s the booking.</p><a class="bigphone rv" href="tel:+61400000000">0400 000 000</a><p class="contact-meta rv">Seven days · 7am–7pm · <a href="mailto:hello@kestrel.example">hello@kestrel.example</a></p></div></section>
+
+<section class="s-bone" id="report">
+  <div class="wrap">
+    <div class="report-grid">
+      <div>
+        <p class="kick rv">01 · The report</p>
+        <h2 class="rv">Read one before you pay for one.</h2>
+        <p class="sub rv">Filter the defects, open any line, and see exactly how an issue is located, rated and explained. The address has been removed; the report structure has not.</p>
+      </div>
+      <div class="report-photo rv"><div class="ph"></div></div>
+    </div>
+
+    <div class="reader rv">
+      <div class="reader-head"><strong>Sample report · 38 pages</strong><span>Defects section · address removed</span></div>
+      <div class="chips" role="group" aria-label="Filter defects">
+        <button class="chip" data-filter="all" aria-pressed="true">All <span class="ct" data-count="all"></span></button>
+        <button class="chip" data-filter="major" aria-pressed="false">Major <span class="ct" data-count="major"></span></button>
+        <button class="chip" data-filter="minor" aria-pressed="false">Minor <span class="ct" data-count="minor"></span></button>
+        <button class="chip" data-filter="pest" aria-pressed="false">Timber pest <span class="ct" data-count="pest"></span></button>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <ul class="entries" id="entries">
+        <li class="entry" data-rate="major" data-cat="building">
+          <button class="entry-btn" aria-expanded="false"><span class="ref">3.1</span><span class="ttl">Roof valley flashing failed<small>Active leak staining to ceiling below bathroom</small></span><span class="rate major">Major</span></button>
+          <div class="entry-body">
+            <div>
+              <p class="lbl">What was observed</p>
+              <p>The valley flashing on the northern roof plane has lifted at the lower third. Water is tracking behind it and staining the ceiling lining in the hallway below. Staining was damp to the touch on the day of inspection.</p>
+              <p class="lbl">Why it's rated major</p>
+              <p>Active water entry into the roof void. Left through a wet season it will reach ceiling battens and the light fitting circuit.</p>
+            </div>
+            <div class="shot">PHOTOGRAPH 3.1<br>BLANK SLOT</div>
+          </div>
+        </li>
+        <li class="entry" data-rate="major" data-cat="building">
+          <button class="entry-btn" aria-expanded="false"><span class="ref">4.4</span><span class="ttl">Subfloor moisture elevated<small>Readings 22–28% at southern bearer run</small></span><span class="rate major">Major</span></button>
+          <div class="entry-body">
+            <div>
+              <p class="lbl">What was observed</p>
+              <p>Moisture readings of 22 to 28 percent were recorded across the southern bearer run, against 12 to 14 percent elsewhere. Two subfloor vents are covered by garden bed soil.</p>
+              <p class="lbl">Why it's rated major</p>
+              <p>Sustained moisture above 20 percent in structural timber invites both rot and termite attack.</p>
+            </div>
+            <div class="shot">PHOTOGRAPH 4.4<br>BLANK SLOT</div>
+          </div>
+        </li>
+        <li class="entry" data-rate="major" data-cat="pest">
+          <button class="entry-btn" aria-expanded="false"><span class="ref">5.2</span><span class="ttl">Inactive termite mudding<small>No live activity found; ventilation restricted</small></span><span class="rate major">Major</span></button>
+          <div class="entry-body">
+            <div>
+              <p class="lbl">What was observed</p>
+              <p>Mud leads were found on two subfloor piers. No live termites were located, but restricted ventilation and a leaking outlet remain.</p>
+              <p class="lbl">Why it's rated major</p>
+              <p>Previous activity in a property with unresolved conducive conditions requires a management plan before settlement.</p>
+            </div>
+            <div class="shot">PHOTOGRAPH 5.2<br>BLANK SLOT</div>
+          </div>
+        </li>
+        <li class="entry" data-rate="major" data-cat="building">
+          <button class="entry-btn" aria-expanded="false"><span class="ref">6.3</span><span class="ttl">Stormwater discharging at footing<small>Downpipe unconnected, north-east corner</small></span><span class="rate major">Major</span></button>
+          <div class="entry-body">
+            <div>
+              <p class="lbl">What was observed</p>
+              <p>The north-east downpipe terminates above ground with no connection to the stormwater line. Scour is visible at the footing.</p>
+              <p class="lbl">Why it's rated major</p>
+              <p>Concentrated water at a footing is inexpensive to repair and expensive to ignore.</p>
+            </div>
+            <div class="shot">PHOTOGRAPH 6.3<br>BLANK SLOT</div>
+          </div>
+        </li>
+        <li class="entry" data-rate="minor" data-cat="pest">
+          <button class="entry-btn" aria-expanded="false"><span class="ref">5.8</span><span class="ttl">Borer damage to garden sleepers<small>Surface flight holes, non-structural timber</small></span><span class="rate minor">Minor</span></button>
+          <div class="entry-body">
+            <div>
+              <p class="lbl">What was observed</p>
+              <p>Flight holes consistent with common furniture borer were noted in landscaping sleepers. The timber is not structural and is not in contact with the dwelling.</p>
+              <p class="lbl">Why it's rated minor</p>
+              <p>No risk to the building; noted so it is not mistaken for termite damage later.</p>
+            </div>
+            <div class="shot">PHOTOGRAPH 5.8<br>BLANK SLOT</div>
+          </div>
+        </li>
+        <li class="entry" data-rate="minor" data-cat="building">
+          <button class="entry-btn" aria-expanded="false"><span class="ref">7.1</span><span class="ttl">Cracked mortar, west elevation<small>Hairline, no displacement, monitor</small></span><span class="rate minor">Minor</span></button>
+          <div class="entry-body">
+            <div>
+              <p class="lbl">What was observed</p>
+              <p>Hairline cracking under 1mm was noted in the mortar bed above the western window head, with no corresponding internal cracking.</p>
+              <p class="lbl">Why it's rated minor</p>
+              <p>Consistent with normal seasonal movement. Photograph now so changes are measurable.</p>
+            </div>
+            <div class="shot">PHOTOGRAPH 7.1<br>BLANK SLOT</div>
+          </div>
+        </li>
+      </ul>
+      <p class="reader-foot">Every report also records what could <em>not</em> be inspected on the day, and why. That page is part of what makes a report trustworthy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band grain dark" id="inspectors">
+  <div class="band-media"><div class="ph"></div></div>
+  <div class="wrap">
+    <p class="kick rv">02 · Who turns up</p>
+    <h2 class="rv">You'll know which one is coming.</h2>
+    <p class="sub rv">No subcontractors and no rotating roster. One of these two does your inspection and writes your report.</p>
+
+    <div class="tabs rv" role="tablist" aria-label="Inspectors">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-alex" id="t-alex">Alex Harland</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-morgan" id="t-morgan" tabindex="-1">Morgan Ellis</button>
+    </div>
+
+    <div class="panel on rv" id="p-alex" role="tabpanel" aria-labelledby="t-alex">
+      <div class="portrait">PORTRAIT SLOT · BLANK</div>
+      <div>
+        <h3>Alex Harland</h3>
+        <p class="role">Licensed builder · 22 years</p>
+        <p>Carpenter by trade, on the tools from 2003 and inspecting full time since 2011. Alex handles pre-purchase and new-build handover work, and writes the structural sections of every report.</p>
+        <p>Nothing goes in a report he could not point at and explain to the buyer standing beside him.</p>
+        <ul class="plist">
+          <li><span>Pre-purchase building</span><span>Lead inspector</span></li>
+          <li><span>New build handover</span><span>Lead inspector</span></li>
+          <li><span>Typical time on site</span><span>2 to 3 hours</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" id="p-morgan" role="tabpanel" aria-labelledby="t-morgan" hidden>
+      <div class="portrait">PORTRAIT SLOT · BLANK</div>
+      <div>
+        <h3>Morgan Ellis</h3>
+        <p class="role">Timber pest technician · 15 years</p>
+        <p>Fifteen years in termite management before moving into inspection work. Morgan handles every timber pest and moisture job, including the subfloor sections nobody enjoys.</p>
+        <p>Thermal imaging and moisture metering travel to every inspection, because the conditions that attract pests are the part that matters.</p>
+        <ul class="plist">
+          <li><span>Timber pest to AS 4349.3</span><span>Lead inspector</span></li>
+          <li><span>Termite management to AS 3660.2</span><span>Lead inspector</span></li>
+          <li><span>Typical time on site</span><span>1.5 to 2 hours</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s-ivory" id="standards">
+  <div class="wrap">
+    <p class="kick rv">03 · Standards &amp; clients</p>
+    <h2 class="rv">Specific enough to make a decision.</h2>
+    <p class="sub rv">Every report states what was inspected, what could not be reached, and the standard under which it was prepared.</p>
+    <div class="standards rv">
+      <div class="standard"><b>AS 4349.1</b><span>Pre-purchase building inspections</span></div>
+      <div class="standard"><b>AS 4349.3</b><span>Timber pest inspections</span></div>
+      <div class="standard"><b>AS 3660.2</b><span>Termite management in existing buildings</span></div>
+    </div>
+
+    <div class="quotes">
+      <div class="quote-row rv">
+        <blockquote>Clear report, same day we needed it, and a call to explain the three things that actually mattered before settlement.</blockquote>
+        <cite><span class="stars">★★★★★</span> Sarah · Pre-purchase · Inner West</cite>
+      </div>
+      <div class="quote-row rv">
+        <blockquote>Found stormwater dumping on the footing that two other quotes had missed. Paid for itself before we signed.</blockquote>
+        <cite><span class="stars">★★★★★</span> James · Building &amp; pest · North</cite>
+      </div>
+      <div class="quote-row rv">
+        <blockquote>No sales pitch, no scare tactics. Just what was wrong, what wasn't, and what to do next.</blockquote>
+        <cite><span class="stars">★★★★★</span> Priya · Handover · New build</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s-paper" id="contact">
+  <div class="wrap">
+    <div class="contact-inner rv">
+      <div class="ph"></div>
+      <p class="eyebrow">Talk it through</p>
+      <h2>Ring us. We'll tell you straight away if we can get there tomorrow.</h2>
+      <p class="sub">Tell us the address and the date you need it by. That's the booking.</p>
+      <a class="bigphone" href="tel:+61400000000">0400 000 000</a>
+      <p class="c-meta">Seven days · 7am–7pm</p>
+      <p class="c-mail">Or email <a href="mailto:hello@kestrel.example">hello@kestrel.example</a></p>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="footer"><div class="wrap"><div class="footer-row"><span>Kestrel Building &amp; Pest — reference concept</span><span>Demonstration only</span></div><p class="disclaimer">Kestrel Building &amp; Pest is a fictional business created to demonstrate homepage layout and content structure. Names, licence numbers, phone numbers, reviews and credentials are illustrative. Photograph slots are deliberately blank: they show report structure, not invented evidence.</p></div></footer><div class="tag">REFERENCE CONCEPT</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fline">
+      <div>Kestrel Building &amp; Pest — reference concept</div>
+      <div>LIC 000000 · DEMONSTRATION</div>
+    </div>
+    <p class="disc">Kestrel Building &amp; Pest is a fictional business created to demonstrate homepage layout and content structure. Names, licence numbers, phone numbers, reviews and credentials are illustrative. Photography throughout this page is licensed stock imagery used for layout demonstration only — it does not depict this business, its staff, or any property it has inspected. Report photograph slots are deliberately blank patterns, not invented evidence.</p>
+  </div>
+</footer>
+
+<div class="tag">REFERENCE CONCEPT</div>
+
 <script>
-(()=>{const entries=[...document.querySelectorAll(".entry")],chips=[...document.querySelectorAll(".chip")],count=document.getElementById("count"),matches=(e,f)=>f==="all"||f==="pest"?f==="all"||e.dataset.cat==="pest":e.dataset.rate===f,totals={all:0,major:0,minor:0,pest:0};entries.forEach(e=>Object.keys(totals).forEach(f=>{if(matches(e,f))totals[f]++}));document.querySelectorAll(".ct").forEach(e=>e.textContent=totals[e.dataset.count]);function apply(f){let shown=0;entries.forEach(e=>{const ok=matches(e,f);e.style.display=ok?"":"none";if(ok)shown++;else{e.classList.remove("open");e.querySelector(".entry-btn").setAttribute("aria-expanded","false")}});chips.forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.filter===f)));count.textContent=`Showing ${shown} of ${totals.all} defects · select a line to open it`}chips.forEach(c=>c.addEventListener("click",()=>apply(c.dataset.filter)));entries.forEach(e=>{const b=e.querySelector(".entry-btn");b.addEventListener("click",()=>{const open=e.classList.toggle("open");b.setAttribute("aria-expanded",String(open))})});apply("all");const tabs=[...document.querySelectorAll(".tab")];function select(i,focus){tabs.forEach((t,n)=>{const on=n===i,p=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-selected",String(on));p.classList.toggle("on",on);p.toggleAttribute("hidden",!on)});if(focus)tabs[i].focus()}tabs.forEach((t,i)=>{t.addEventListener("click",()=>select(i));t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();select((i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length,true)}})});const reveal=document.querySelectorAll(".rv");if("IntersectionObserver"in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -55px"});reveal.forEach(e=>io.observe(e))}else reveal.forEach(e=>e.classList.add("in"))})();
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav solidify + scroll progress */
+  var nav = document.getElementById('nav'), prog = document.getElementById('prog');
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    nav.classList.toggle('solid', y > 40);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* staggered reveal */
+  var rv = [].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var sibs = [].slice.call(e.target.parentElement.children).filter(function(n){ return n.classList.contains('rv'); });
+        var idx = Math.max(0, sibs.indexOf(e.target));
+        e.target.style.transitionDelay = Math.min(idx * 90, 450) + 'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin:'0px 0px -60px 0px', threshold:.08 });
+    rv.forEach(function(el){ io.observe(el); });
+  } else { rv.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* hero entrance */
+  window.addEventListener('load', function(){
+    document.querySelectorAll('.hero .rv').forEach(function(el, i){
+      setTimeout(function(){ el.classList.add('in'); }, reduce ? 0 : 120 * i);
+    });
+  });
+  setTimeout(function(){ document.querySelectorAll('.hero .rv').forEach(function(el){ el.classList.add('in'); }); }, 1400);
+
+  /* report reader — filter chips */
+  var entries = [].slice.call(document.querySelectorAll('.entry'));
+  var chips = [].slice.call(document.querySelectorAll('.chip'));
+  var count = document.getElementById('count');
+  function matches(entry, filter){
+    if(filter === 'all') return true;
+    if(filter === 'pest') return entry.dataset.cat === 'pest';
+    return entry.dataset.rate === filter;
+  }
+  var totals = { all: 0, major: 0, minor: 0, pest: 0 };
+  entries.forEach(function(e){ Object.keys(totals).forEach(function(f){ if(matches(e, f)) totals[f]++; }); });
+  document.querySelectorAll('.ct').forEach(function(el){ el.textContent = totals[el.dataset.count]; });
+  function apply(filter){
+    var shown = 0;
+    entries.forEach(function(e){
+      var ok = matches(e, filter);
+      e.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+      else { e.classList.remove('open'); e.querySelector('.entry-btn').setAttribute('aria-expanded', 'false'); }
+    });
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c.dataset.filter === filter)); });
+    count.textContent = 'Showing ' + shown + ' of ' + totals.all + ' defects · select a line to open it';
+  }
+  chips.forEach(function(c){ c.addEventListener('click', function(){ apply(c.dataset.filter); }); });
+  entries.forEach(function(e){
+    var b = e.querySelector('.entry-btn');
+    b.addEventListener('click', function(){
+      var open = e.classList.toggle('open');
+      b.setAttribute('aria-expanded', String(open));
+    });
+  });
+  apply('all');
+
+  /* inspector tabs — arrow-key navigation */
+  var tabs = [].slice.call(document.querySelectorAll('.tab'));
+  function selectTab(i, focus){
+    tabs.forEach(function(t, n){
+      var on = n === i, panel = document.getElementById(t.getAttribute('aria-controls'));
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      panel.classList.toggle('on', on);
+      panel.toggleAttribute('hidden', !on);
+    });
+    if(focus) tabs[i].focus();
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ selectTab(i); });
+    t.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+        e.preventDefault();
+        selectTab((i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length, true);
+      }
+    });
+  });
+})();
 </script>
-</body></html>
+</body>
+</html>
