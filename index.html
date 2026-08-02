@@ -623,7 +623,16 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
     chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c.dataset.filter === filter)); });
     count.textContent = 'Showing ' + shown + ' of ' + totals.all + ' defects · select a line to open it';
   }
-  chips.forEach(function(c){ c.addEventListener('click', function(){ apply(c.dataset.filter); }); });
+  chips.forEach(function(c, i){
+    c.addEventListener('click', function(){ apply(c.dataset.filter); });
+    c.addEventListener('keydown', function(e){
+      if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      var n = (i + (e.key === 'ArrowRight' ? 1 : chips.length - 1)) % chips.length;
+      chips[n].focus();
+      apply(chips[n].dataset.filter);
+    });
+  });
   entries.forEach(function(e){
     var b = e.querySelector('.entry-btn');
     b.addEventListener('click', function(){
