@@ -193,7 +193,18 @@ h2{font-size:clamp(2.05rem,4.4vw,3.4rem);max-width:17ch}
 .entry-body p{margin:0}
 .entry-body p+p{margin-top:18px}
 .lbl{color:#8C6F1C!important;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
-.shot,.portrait{display:grid;place-items:center;min-height:120px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,rgba(27,38,59,.06) 0 8px,transparent 8px 16px);color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.12em;text-align:center;border-radius:10px}
+.shot,.portrait{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:120px;border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  background:
+    linear-gradient(160deg,rgba(27,38,59,.04),rgba(27,38,59,.09)),
+    repeating-linear-gradient(135deg,rgba(27,38,59,.05) 0 8px,transparent 8px 16px);
+  color:var(--muted);text-align:center}
+.shot span,.portrait span{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.55}
+.shot em,.portrait em{font-style:normal;font-size:11.5px;font-weight:500;letter-spacing:.02em;max-width:14ch;line-height:1.35;color:var(--muted)}
+.portrait{min-height:340px;background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(.92) contrast(1.03)}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(19,28,46,.78) 100%)}
+.portrait .cap{position:relative;z-index:1;margin-top:auto;padding:18px;align-self:stretch;text-align:left}
+.portrait .cap span{color:rgba(255,255,255,.92);opacity:1;font-size:11px;letter-spacing:.16em}
+.portrait .cap em{display:block;margin-top:4px;color:rgba(255,255,255,.62);max-width:none}
 .reader-foot{margin:0;padding:19px 24px;background:#EEF0EA;color:var(--muted);font-size:14px}
 @media(max-width:760px){
   .entry-btn{grid-template-columns:40px 1fr;gap:11px;padding:16px}
@@ -219,10 +230,9 @@ h2{font-size:clamp(2.05rem,4.4vw,3.4rem);max-width:17ch}
 .tab{position:relative;border:0;padding:0 0 15px;background:none;color:var(--dark-muted);font:600 clamp(19px,3vw,25px) var(--serif);cursor:pointer;transition:color .3s}
 .tab[aria-selected="true"]{color:#fff}
 .tab[aria-selected="true"]::after{content:"";position:absolute;height:2px;right:0;bottom:-1px;left:0;background:var(--gold)}
-.panel{display:none;grid-template-columns:.72fr 1.28fr;gap:clamp(28px,6vw,68px);padding-top:38px}
+.panel{display:none;grid-template-columns:.72fr 1.28fr;gap:clamp(28px,6vw,68px);padding-top:38px;align-items:start}
 .panel.on{display:grid}
 @media(max-width:900px){.panel{grid-template-columns:1fr}}
-.panel .portrait{min-height:340px;border-color:var(--line-dark);background:repeating-linear-gradient(135deg,rgba(247,246,242,.08) 0 9px,transparent 9px 18px);color:var(--dark-muted)}
 .panel h3{margin:0;font:600 clamp(27px,4vw,36px)/1 var(--serif);color:#fff}
 .role{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
 .panel p:not(.role){color:var(--dark-muted);margin-top:14px}
@@ -350,7 +360,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
               <p class="lbl">Why it's rated major</p>
               <p>Active water entry into the roof void. Left through a wet season it will reach ceiling battens and the light fitting circuit.</p>
             </div>
-            <div class="shot">PHOTOGRAPH 3.1<br>BLANK SLOT</div>
+            <div class="shot" aria-hidden="true"><span>Photograph 3.1</span><em>Valley flashing · address removed</em></div>
           </div>
         </li>
         <li class="entry" data-rate="major" data-cat="building">
@@ -362,7 +372,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
               <p class="lbl">Why it's rated major</p>
               <p>Sustained moisture above 20 percent in structural timber invites both rot and termite attack.</p>
             </div>
-            <div class="shot">PHOTOGRAPH 4.4<br>BLANK SLOT</div>
+            <div class="shot" aria-hidden="true"><span>Photograph 4.4</span><em>Subfloor bearer · address removed</em></div>
           </div>
         </li>
         <li class="entry" data-rate="major" data-cat="pest">
@@ -374,7 +384,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
               <p class="lbl">Why it's rated major</p>
               <p>Previous activity in a property with unresolved conducive conditions requires a management plan before settlement.</p>
             </div>
-            <div class="shot">PHOTOGRAPH 5.2<br>BLANK SLOT</div>
+            <div class="shot" aria-hidden="true"><span>Photograph 5.2</span><em>Termite mudding · address removed</em></div>
           </div>
         </li>
         <li class="entry" data-rate="major" data-cat="building">
@@ -386,7 +396,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
               <p class="lbl">Why it's rated major</p>
               <p>Concentrated water at a footing is inexpensive to repair and expensive to ignore.</p>
             </div>
-            <div class="shot">PHOTOGRAPH 6.3<br>BLANK SLOT</div>
+            <div class="shot" aria-hidden="true"><span>Photograph 6.3</span><em>Stormwater discharge · address removed</em></div>
           </div>
         </li>
         <li class="entry" data-rate="minor" data-cat="pest">
@@ -398,7 +408,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
               <p class="lbl">Why it's rated minor</p>
               <p>No risk to the building; noted so it is not mistaken for termite damage later.</p>
             </div>
-            <div class="shot">PHOTOGRAPH 5.8<br>BLANK SLOT</div>
+            <div class="shot" aria-hidden="true"><span>Photograph 5.8</span><em>Garden sleeper · address removed</em></div>
           </div>
         </li>
         <li class="entry" data-rate="minor" data-cat="building">
@@ -410,7 +420,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
               <p class="lbl">Why it's rated minor</p>
               <p>Consistent with normal seasonal movement. Photograph now so changes are measurable.</p>
             </div>
-            <div class="shot">PHOTOGRAPH 7.1<br>BLANK SLOT</div>
+            <div class="shot" aria-hidden="true"><span>Photograph 7.1</span><em>West elevation · address removed</em></div>
           </div>
         </li>
       </ul>
@@ -432,7 +442,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
     </div>
 
     <div class="panel on rv" id="p-alex" role="tabpanel" aria-labelledby="t-alex">
-      <div class="portrait">PORTRAIT SLOT · BLANK</div>
+      <div class="portrait" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><div class="cap"><span>Alex Harland</span><em>Licensed builder</em></div></div>
       <div>
         <h3>Alex Harland</h3>
         <p class="role">Licensed builder · 22 years</p>
@@ -446,7 +456,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
       </div>
     </div>
     <div class="panel" id="p-morgan" role="tabpanel" aria-labelledby="t-morgan" hidden>
-      <div class="portrait">PORTRAIT SLOT · BLANK</div>
+      <div class="portrait" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&amp;fit=crop&amp;w=900&amp;q=80')"><div class="cap"><span>Morgan Ellis</span><em>Timber pest technician</em></div></div>
       <div>
         <h3>Morgan Ellis</h3>
         <p class="role">Timber pest technician · 15 years</p>
@@ -473,6 +483,7 @@ footer{background:#F3EFE4;border-top:1px solid var(--line);padding:clamp(3rem,6v
       <div class="standard"><b>AS 3660.2</b><span>Termite management in existing buildings</span></div>
     </div>
 
+    <p class="sub rv" style="margin-top:40px">Illustrative reviews for this demonstration site. On a live build these are quoted verbatim from the firm's Google listing.</p>
     <div class="quotes">
       <div class="quote-row rv">
         <blockquote>Clear report, same day we needed it, and a call to explain the three things that actually mattered before settlement.</blockquote>
